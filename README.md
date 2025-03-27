@@ -1,5 +1,5 @@
-# DriveBench
-DriveBench: A Comprehensive Benchmark for Evaluating Large Vision-Language Models on Autonomous Driving
+# VLADBench
+Fine-Grained Evaluation of Large Vision-Language Models in Autonomous Driving
 # Paper
 
 # Data
