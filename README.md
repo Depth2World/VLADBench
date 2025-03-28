@@ -1,6 +1,6 @@
 # VLADBench
 Fine-Grained Evaluation of Large Vision-Language Models in Autonomous Driving
 # Paper
-
-# Data
-The dataset is coming soon.
+https://arxiv.org/pdf/2503.21505
+# Benchmark & Domain-specific Model
+Coming soon
