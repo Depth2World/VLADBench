@@ -57,7 +57,7 @@
             "Lateral"
         ],
         "Ego_trajectory_Planning":[
-            "drivelm_tra_val"
+            "Trajectory"
         ]
     }
 }
