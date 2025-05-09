@@ -70,5 +70,5 @@ For the detailed results of each tasks and the results from the large-scale mode
 2. Run evaluate_vlm.py for scores.
 
 **Note**  
-**1. The bounding boxes in VLADBench are NOT resized. You should modify them in [prompt](https://github.com/Depth2World/VLADBench/blob/f1b7cddbe4f261feec4e82fc36a6bb26ae561bd1/qwen2vl_all.py#L79) and [evaluation](https://github.com/Depth2World/VLADBench/blob/f1b7cddbe4f261feec4e82fc36a6bb26ae561bd1/evluate_utils.py#L170) for different VLMs.**  
+**1. The bounding boxes in VLADBench are NOT resized. You should modify them in [prompt](https://github.com/Depth2World/VLADBench/blob/8156375d6b0e88ec5ca4f5a8119a9a0ee6c1ed18/qwen2vl_all.py#L79) and [evaluation](https://github.com/Depth2World/VLADBench/blob/8156375d6b0e88ec5ca4f5a8119a9a0ee6c1ed18/evaluate_utils.py#L170) for different VLMs.**  
 **2. The finall scores do NOT inlucude the trajectory evaluation.**
