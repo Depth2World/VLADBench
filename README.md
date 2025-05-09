@@ -66,7 +66,9 @@ For the detailed results of each tasks and the results from the large-scale mode
 
 # Evaluation Pipeine
 
-1. We provide a test example based on Qwen2-VL.
-2. run xxxxx.py for evaluation.
+1. We provide a test example based on Qwen2-VL.[qwen2vl_all.py]
+2. Run evaluate_vlm.py for scores.
 
-
+**Note**  
+**1. The bounding boxes in VLADBench are NOT resized. You should modify them in [prompt](https://github.com/Depth2World/VLADBench/blob/f1b7cddbe4f261feec4e82fc36a6bb26ae561bd1/qwen2vl_all.py#L82) and [evaluation](https://github.com/Depth2World/VLADBench/blob/f1b7cddbe4f261feec4e82fc36a6bb26ae561bd1/evluate_utils.py#L191) for different VLMs.**  
+**2. The finall scores do NOT inlucude the trajectory evaluation.**
