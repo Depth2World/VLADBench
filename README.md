@@ -18,31 +18,33 @@
 
 
 # Overview
+
+Current benchmarks designed for VLM-based AD face several notable limitations:
+
+- **Coarse-grained Categories**: The underlying datasets of
+the VLM-based models are often simplistic, typically categorizing tasks into perception, prediction, and planning
+with reasoning, which are incomplete for evaluating the nuanced cognitive and reasoning abilities required for safe and
+reliable AD. 
+
+- **Lack of Dynamic Elements**: Both static and dynamic scenes are crucial for evaluating AD systems, a robust analysis of dynamic elements is particularly important for validating the temporal reasoning capabilities, especially in understanding traffic participant intentions within the scene and executing the nuanced spatio-temporal reasoning required for safe navigation. 
+
+- **Homogeneous Data**:
+Existing VLM-based AD datasets often suffer from a lack
+of diversity, which limits the ability to test models across
+a wide range of real-world scenarios. The narrow results
+restrict the evaluation of zero-shot generalization and the
+performance on challenging corner cases.
+
+We introduce **VLADBench**, specifically designed to rigorously evaluate the capabilities of VLMs in AD. VLADBench employes a hierarchical structure that reflects the complex skill set required for reliable driving, progressing from fundamental scene and traffic elements comprehension to advanced reasoning and decision-making. 
+
+- With 2000 static scenes and 3000 dynamic scenarios, VLADBench spans 5 primary domains: Traffic Knowledge Understanding (TKU), General Element Recognition (GER), Traffic Graph Generation (TGG), Target Attribute Comprehension (TAC), and Ego Decision-making and Planning(EDP). For a more detailed assessment, 11 secondary aspects and 29 tertiary tasks are defined, resulting in a total of 12K questions.
+-  VLADBench is built from existing publicly available datasets, meticulously curated through a manual selection across 12 sources, aimed at challenging VLM capabilities in diverse challenging driving situations.
+- To further investigate the intersections among the 5 key domains, we collect and construct approximately 1.4M AD-specific QAs from public resources. We then categorize these QAs
+using GPT-4 and train models on individual domain-specific (DS) datasets. Finally, we validate the trained models on VLADBench to assess their performance across different domains.
+
 <p align="center">
     <img src="./asset/sun.jpeg" width="50%" height="50%">
 </p>
-
-
-🧠 Structured Evuluation
-<div align="center">
-
-| **5 Domains** | **11 Aspects** | **29 Tasks** |
-|----------------------------|------------------------------|--------------|
-| **Traffic Knowledge Understanding** | Road Traffic Signals | Pavement Marking, Traffic Sign, Traffic Light |
-|&nbsp; | Road Passage Provisions | Right-Of-Way |
-| **General Element Recognition** | Foreground | Lane Recognition, Vehicle Recognition, Vehicle Status, VRU Recognition, Obstruction Recognition |
-|  | Background | Light, Weather |
-| **Traffic Graph Generation** | Signal Element Relation | Light-Lane Relation, Sign-Lane Relation, Sign-Sign Relation |
-|  | Lane Element Relation | Lane Speed Relation, Lane Change Relation |
-| **Target Attribute Comprehension** | Intention Judgment | Vehicle Cut-In, VRU Cut-In, VRU Cross, Long-Short Parking |
-| | Behavior Understanding | Vehicle Behavior, VRU Behavior |
-| **Ego Decision-Making and Planning** | Ego Action Reasoning | Key Object Detection, Drive Efficiency, Risk Prediction, Spatio-Temporal Reasoning |
-|  | Meta Decision-Making | Lateral Decision, Longitudinal Decision |
-|  | Ego Trajectory Planning | Motion Planning |
-
-</div>
-
-
 
 
 
@@ -53,5 +55,18 @@
 <p align="center">
     <img src="./asset/domain_45.jpeg" width="90%" height="90%">
 </p>
-# Benchmark
-Coming soon
+
+# Evaluation Results
+<p align="center">
+    <img src="./asset/results_vlms.png" width="100%" height="100%">
+</p>
+
+For the detailed results of each tasks and the results from the large-scale models, please see the paper.
+
+
+# Evaluation Pipeine
+
+1. We provide a test example based on Qwen2-VL.
+2. run xxxxx.py for evaluation.
+
+
