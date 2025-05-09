@@ -1,0 +1,63 @@
+{
+    "Traffic_Knowledge_Understanding": {
+        "Road_Traffic_Signals": [
+            "Traffic_Light",
+            "Pavement_Marking",
+            "Traffic_Sign"
+        ],
+        "Road_Passage_Provisions": [
+            "Right_Of_Way"
+        ]
+    },
+    "General_Element_Recognition": {
+        "Foreground": [
+            "VRU_Recognition",
+            "Vehicle_Recognition",
+            "Vehicle_Status",
+            "Lane_Recognition",
+            "Obstruction_Recognition"
+        ],
+        "Background": [
+            "Light",
+            "Weather"
+        ]
+    },
+    "Traffic_Graph_Generation": {
+        "Signal_Element_Relation": [
+            "Sign_Sign_Relation",
+            "Sign_Lane_Relation",
+            "Light_Lane_Relation"
+        ],
+        "Lane_Element_Relation": [
+            "Lane_Speed_Relation",
+            "Lane_Change_Relation"
+        ]
+    },
+    "Target_Attribute_Comprehension": {
+        "Intention_Judgment": [
+            "VRU_Cutin",
+            "Vehicle_Cutin",
+            "VRU_Cross",
+            "Long_Short_Parking"
+        ],
+        "Behavior_Understanding": [
+            "Vehicle_Bahavior",
+            "VRU_Bahavior"
+        ]
+    },
+    "Ego_Decision_Planning": {
+        "Ego_Action_Reasoning": [
+            "Key_Obsturction_Detection",
+            "Spatial_Temporal_Reasoning",
+            "Risk_Prediction",
+            "Drive_Efficiency"
+        ],
+        "Meta_Action_Decision": [
+            "Longitudinal",
+            "Lateral"
+        ],
+        "Ego_trajectory_Planning":[
+            "drivelm_tra_val"
+        ]
+    }
+}
