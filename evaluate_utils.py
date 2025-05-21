@@ -258,7 +258,7 @@ def Relation_criterion_QA(third_task_data,MODEL=None):
         scores_list = np.array(scores_list)
         scores = compare_and_count(scores_list[len(scores_list)//2:], scores_list[:len(scores_list)//2])
         totol_improve_score += scores
-    return ques_total_num,total_score/ques_total_num,obey_insytruction/ques_total_num,totol_improve_score/2/ques_total_num
+    return ques_total_num,total_score/ques_total_num,obey_insytruction/ques_total_num,totol_improve_score*2/ques_total_num
 
 
     
