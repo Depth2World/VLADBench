@@ -358,13 +358,15 @@ def Judge_criterion_QA(third_task_data,MODEL=None):
             pred = remove_symbols(pred)   
             clean_pred = clean_string(pred).lower()  
             options_nums = clean_pred.split("', '")
-            reference_q_ind = convert_if_number(reference[q_ind]).lower()
+            # reference_q_ind = convert_if_number(reference[q_ind]).lower()
+            reference_q_ind = clean_string(convert_if_number(reference[q_ind])).lower()
             if 'yes' == reference_q_ind or 'no'  == reference_q_ind:
                 judge_ques_total_num+=1
             else:
                 des_ques_total_num += 1
             if len(options_nums)==1: 
-                if clean_pred in ques_nopath: 
+                # if clean_pred in ques_nopath: 
+                if ''.join(clean_pred.split(';') in ques_nopath: 
                     obey_insytruction+=1
                 if clean_pred==reference_q_ind:
                     if 'yes' == reference_q_ind or 'no'  == reference_q_ind:
