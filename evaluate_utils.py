@@ -302,7 +302,7 @@ def RoadChange_criterion_QA(third_task_data,MODEL=None):
         scores = compare_and_count(scores_list[len(scores_list)//2:], scores_list[:len(scores_list)//2])
         totol_improve_score += scores
                       
-    return ques_total_num,right_num/ques_total_num,obey_insytruction/ques_total_num,totol_improve_score/2/ques_total_num
+    return ques_total_num,right_num/ques_total_num,obey_insytruction/ques_total_num,totol_improve_score*2/ques_total_num
 
 def RoadSpeed_criterion_QA(third_task_data,MODEL=None):
     ques_total_num = 0
@@ -336,7 +336,7 @@ def RoadSpeed_criterion_QA(third_task_data,MODEL=None):
         scores = compare_and_count(scores_list[len(scores_list)//2:], scores_list[:len(scores_list)//2])
         totol_improve_score += scores
         
-    return ques_total_num,right_num/ques_total_num,obey_insytruction/ques_total_num,totol_improve_score/2/ques_total_num
+    return ques_total_num,right_num/ques_total_num,obey_insytruction/ques_total_num,totol_improve_score*2/ques_total_num
     # return ques_total_num,right_num,obey_insytruction,totol_improve_score/2
 
 
